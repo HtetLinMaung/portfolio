@@ -1,0 +1,513 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <!-- <script
+      is:inline
+      src="https://unpkg.com/typewriter-effect@latest/dist/core.js"
+    ></script> -->
+    <script is:inline defer>
+      async function timeout(timeout) {
+        return new Promise((resolve) => setTimeout(resolve, timeout));
+      }
+      async function animateInfo() {
+        // const mainInfo = document.querySelector(".main-info");
+        // if (mainInfo) {
+        //   await timeout(500);
+        //   mainInfo.style.opacity = 1;
+        // }
+        const hiiam = document.getElementById("hiiam");
+        const hlm = document.getElementById("hlm");
+        if (hiiam) {
+          await timeout(500);
+          for (const c of "Hi! I Am") {
+            await timeout(50);
+            hiiam.innerHTML += c;
+          }
+        }
+        if (hlm) {
+          await timeout(1000);
+          for (const c of "Htet Lin Maung") {
+            await timeout(50);
+            hlm.innerHTML += c;
+          }
+        }
+
+        const introDesc = document.getElementById("intro-desc");
+        if (introDesc) {
+          await timeout(1000);
+
+          for (const c of "I am a professional programmer with more than 3 years of experiences.") {
+            await timeout(25);
+            introDesc.innerHTML += c;
+          }
+        }
+        const skillTags = document.getElementById("skill-tags");
+        if (skillTags) {
+          skillTags.style.opacity = 1;
+        }
+        await timeout(500);
+        const contactBtns = document.getElementById("contact-btns");
+        if (contactBtns) {
+          contactBtns.style.opacity = 1;
+        }
+        // await timeout(500);
+        // const hlmImage = document.querySelector(".hlm-image");
+        // if (hlmImage) {
+        //   hlmImage.style.opacity = 1;
+        // }
+        // const projectCards = document.querySelectorAll(".project-card");
+        // for (const projectCard of projectCards) {
+        //   if (projectCard) {
+        //     await timeout(250);
+        //     projectCard.style.opacity = 1;
+        //     await timeout(100);
+        //     projectCard.style.transform = "scale(102%)";
+        //     await timeout(100);
+        //     projectCard.style.transform = "scale(100%)";
+        //   }
+        // }
+      }
+      window.addEventListener("DOMContentLoaded", (event) => {
+        animateInfo();
+        const animeluxBtn = document.getElementById("animelux-btn");
+        if (animeluxBtn) {
+          animeluxBtn.addEventListener("click", () => {
+            location.href = "http://starless.cloud/animelux";
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #da62c4 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    padding: 1rem 0;
+    zoom: 150%;
+  }
+
+  @media only screen and (max-width: 1320px) {
+    body {
+      zoom: 149%;
+    }
+  }
+  @media only screen and (max-width: 1312px) {
+    body {
+      zoom: 148%;
+    }
+  }
+  @media only screen and (max-width: 1303px) {
+    body {
+      zoom: 147%;
+    }
+  }
+  @media only screen and (max-width: 1294px) {
+    body {
+      zoom: 146%;
+    }
+  }
+
+  @media only screen and (max-width: 1285px) {
+    body {
+      zoom: 130%;
+    }
+  }
+  @media only screen and (max-width: 1149px) {
+    body {
+      zoom: 129%;
+    }
+  }
+  @media only screen and (max-width: 1136px) {
+    body {
+      zoom: 128%;
+    }
+  }
+  @media only screen and (max-width: 1127px) {
+    body {
+      zoom: 127%;
+    }
+  }
+  @media only screen and (max-width: 1118px) {
+    body {
+      zoom: 126%;
+    }
+  }
+  @media only screen and (max-width: 1109px) {
+    body {
+      zoom: 125%;
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    body {
+      zoom: 124%;
+    }
+  }
+  @media only screen and (max-width: 1091px) {
+    body {
+      zoom: 123%;
+    }
+  }
+  @media only screen and (max-width: 1083px) {
+    body {
+      zoom: 122%;
+    }
+  }
+  @media only screen and (max-width: 1074px) {
+    body {
+      zoom: 121%;
+    }
+  }
+  @media only screen and (max-width: 1065px) {
+    body {
+      zoom: 120%;
+    }
+  }
+  @media only screen and (max-width: 1056px) {
+    body {
+      zoom: 119%;
+    }
+  }
+  @media only screen and (max-width: 1047px) {
+    body {
+      zoom: 118%;
+    }
+  }
+  @media only screen and (max-width: 1039px) {
+    body {
+      zoom: 117%;
+    }
+  }
+  @media only screen and (max-width: 1030px) {
+    body {
+      zoom: 116%;
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    body {
+      zoom: 115%;
+    }
+  }
+  @media only screen and (max-width: 1012px) {
+    body {
+      zoom: 114%;
+    }
+  }
+  @media only screen and (max-width: 1003px) {
+    body {
+      zoom: 113%;
+    }
+  }
+  @media only screen and (max-width: 995px) {
+    body {
+      zoom: 112%;
+    }
+  }
+  @media only screen and (max-width: 986px) {
+    body {
+      zoom: 111%;
+    }
+  }
+  @media only screen and (max-width: 977px) {
+    body {
+      zoom: 110%;
+    }
+  }
+  @media only screen and (max-width: 968px) {
+    body {
+      zoom: 109%;
+    }
+  }
+  @media only screen and (max-width: 959px) {
+    body {
+      zoom: 108%;
+    }
+  }
+  @media only screen and (max-width: 951px) {
+    body {
+      zoom: 107%;
+    }
+  }
+  @media only screen and (max-width: 942px) {
+    body {
+      zoom: 106%;
+    }
+  }
+  @media only screen and (max-width: 933px) {
+    body {
+      zoom: 105%;
+    }
+  }
+  @media only screen and (max-width: 924px) {
+    body {
+      zoom: 104%;
+    }
+  }
+  @media only screen and (max-width: 915px) {
+    body {
+      zoom: 103%;
+    }
+  }
+  @media only screen and (max-width: 912px) {
+    body {
+      zoom: 100%;
+    }
+  }
+  @media only screen and (max-width: 880px) {
+    body {
+      zoom: 99%;
+    }
+  }
+  @media only screen and (max-width: 871px) {
+    body {
+      zoom: 98%;
+    }
+  }
+  @media only screen and (max-width: 862px) {
+    body {
+      zoom: 97%;
+    }
+  }
+  @media only screen and (max-width: 854px) {
+    body {
+      zoom: 96%;
+    }
+  }
+  @media only screen and (max-width: 845px) {
+    body {
+      zoom: 95%;
+    }
+  }
+  @media only screen and (max-width: 836px) {
+    body {
+      zoom: 94%;
+    }
+  }
+
+  @media only screen and (max-width: 827px) {
+    body {
+      zoom: 93%;
+    }
+  }
+  @media only screen and (max-width: 818px) {
+    body {
+      zoom: 92%;
+    }
+  }
+  @media only screen and (max-width: 810px) {
+    body {
+      zoom: 91%;
+    }
+  }
+  @media only screen and (max-width: 801px) {
+    body {
+      zoom: 90%;
+    }
+  }
+  @media only screen and (max-width: 792px) {
+    body {
+      zoom: 89%;
+    }
+  }
+  @media only screen and (max-width: 783px) {
+    body {
+      zoom: 88%;
+    }
+  }
+
+  @media only screen and (max-width: 774px) {
+    body {
+      zoom: 87%;
+    }
+  }
+  @media only screen and (max-width: 766px) {
+    body {
+      zoom: 86%;
+    }
+  }
+  @media only screen and (max-width: 757px) {
+    body {
+      zoom: 85%;
+    }
+  }
+  @media only screen and (max-width: 748px) {
+    body {
+      zoom: 84%;
+    }
+  }
+  @media only screen and (max-width: 739px) {
+    body {
+      zoom: 83%;
+    }
+  }
+  @media only screen and (max-width: 730px) {
+    body {
+      zoom: 82%;
+    }
+  }
+  @media only screen and (max-width: 722px) {
+    body {
+      zoom: 81%;
+    }
+  }
+  @media only screen and (max-width: 713px) {
+    body {
+      zoom: 80%;
+    }
+  }
+  @media only screen and (max-width: 704px) {
+    body {
+      zoom: 79%;
+    }
+  }
+  @media only screen and (max-width: 695px) {
+    body {
+      zoom: 78%;
+    }
+  }
+  @media only screen and (max-width: 686px) {
+    body {
+      zoom: 77%;
+    }
+  }
+  @media only screen and (max-width: 678px) {
+    body {
+      zoom: 76%;
+    }
+  }
+  @media only screen and (max-width: 669px) {
+    body {
+      zoom: 75%;
+    }
+  }
+  @media only screen and (max-width: 660px) {
+    body {
+      zoom: 74%;
+    }
+  }
+  @media only screen and (max-width: 653px) {
+    body {
+      zoom: 74%;
+    }
+  }
+  @media only screen and (max-width: 651px) {
+    body {
+      zoom: 73%;
+    }
+  }
+  @media only screen and (max-width: 642px) {
+    body {
+      zoom: 72%;
+    }
+  }
+  @media only screen and (max-width: 633px) {
+    body {
+      zoom: 71%;
+    }
+  }
+  @media only screen and (max-width: 625px) {
+    body {
+      zoom: 70%;
+    }
+  }
+  @media only screen and (max-width: 616px) {
+    body {
+      zoom: 69%;
+    }
+  }
+  @media only screen and (max-width: 607px) {
+    body {
+      zoom: 68%;
+    }
+  }
+  @media only screen and (max-width: 598px) {
+    body {
+      zoom: 67%;
+    }
+  }
+  @media only screen and (max-width: 589px) {
+    body {
+      zoom: 66%;
+    }
+  }
+  @media only screen and (max-width: 581px) {
+    body {
+      zoom: 65%;
+    }
+  }
+  @media only screen and (max-width: 572px) {
+    body {
+      zoom: 64%;
+    }
+  }
+  @media only screen and (max-width: 563px) {
+    body {
+      zoom: 63%;
+    }
+  }
+  @media only screen and (max-width: 554px) {
+    body {
+      zoom: 62%;
+    }
+  }
+  @media only screen and (max-width: 545px) {
+    body {
+      zoom: 61%;
+    }
+  }
+  @media only screen and (max-width: 537px) {
+    body {
+      zoom: 60%;
+    }
+  }
+  @media only screen and (max-width: 528px) {
+    body {
+      zoom: 59%;
+    }
+  }
+  @media only screen and (max-width: 519px) {
+    body {
+      zoom: 58%;
+    }
+  }
+  @media only screen and (max-width: 280px) {
+    body {
+      padding: 0;
+    }
+  }
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+  * {
+    transition: all 0.3s;
+  }
+</style>
