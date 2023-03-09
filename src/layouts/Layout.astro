@@ -89,6 +89,32 @@ const { title } = Astro.props;
             location.href = "http://starless.cloud/animelux";
           });
         }
+        const starlesServerBtn = document.getElementById("starless-server-btn");
+        if (starlesServerBtn) {
+          starlesServerBtn.addEventListener("click", () => {
+            location.href = "https://www.npmjs.com/package/starless-server";
+          });
+        }
+        const scrapperBtn = document.getElementById("scrapper-btn");
+        if (scrapperBtn) {
+          scrapperBtn.addEventListener("click", () => {
+            location.href = "http://starless.cloud/scrapperweb";
+          });
+        }
+        const starlessLoadtesterBtn = document.getElementById(
+          "starless-loadtester-btn"
+        );
+        if (starlessLoadtesterBtn) {
+          starlessLoadtesterBtn.addEventListener("click", () => {
+            location.href = "https://www.npmjs.com/package/starless-loadtester";
+          });
+        }
+        const slsqlBtn = document.getElementById("slsql-btn");
+        if (slsqlBtn) {
+          slsqlBtn.addEventListener("click", () => {
+            location.href = "https://www.npmjs.com/package/slsql";
+          });
+        }
       });
     </script>
   </head>
