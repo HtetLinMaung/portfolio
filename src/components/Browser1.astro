@@ -1,11 +1,8 @@
 ---
 ---
 
-<div
-  class="bg-white"
-  style="width: 250.6px; height: 172.2px; border-radius: 15px; padding: 9.1px 14.7px; position: absolute; left: 42px;"
->
-  <div class="flex" style="margin-bottom: 11.899999999999999px;">
+<div class="bg-white browser1">
+  <div class="flex" style="margin-bottom: 1.0625rem;">
     <div class="circle rounded-full"></div>
     <div class="circle rounded-full"></div>
     <div class="circle rounded-full"></div>
@@ -36,7 +33,7 @@
     <div class="short-bar"></div>
   </div>
   <div class="flex">
-    <div class="short-bar" style="margin-bottom: 37.8px;"></div>
+    <div class="short-bar" style="margin-bottom: 3.375rem;"></div>
   </div>
   <div class="flex justify-center">
     <div class="short-bar"></div>
@@ -46,24 +43,37 @@
 
 <style>
   .circle {
-    margin-right: 3.5px;
-    width: 7px;
-    height: 7px;
+    margin-right: 0.3125rem;
+    width: 0.625rem;
+    height: 0.625rem;
     background: #6f6e6e;
   }
   .long-bar {
-    height: 5.6px;
-    width: 91px;
+    height: 0.5rem;
+    width: 8.125rem;
     background: #6f6e6e;
-    border-radius: 15px;
-    margin-bottom: 11.899999999999999px;
+    border-radius: 0.9375rem;
+    margin-bottom: 1.0625rem;
   }
   .short-bar {
-    height: 5.6px;
-    width: 42px;
+    height: 0.5rem;
+    width: 3.75rem;
     background: #6f6e6e;
-    border-radius: 15px;
-    margin-right: 7px;
-    margin-bottom: 11.899999999999999px;
+    border-radius: 0.9375rem;
+    margin-right: 0.625rem;
+    margin-bottom: 1.0625rem;
+  }
+  .browser1 {
+    width: 22.375rem;
+    height: 15.375rem;
+    border-radius: 0.9375rem;
+    padding: 0.8125rem 1.3125rem;
+    position: absolute;
+    left: 60px;
+  }
+  @media only screen and (max-width: 280px) {
+    .browser1 {
+      transform: scale(0.75);
+    }
   }
 </style>

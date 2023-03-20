@@ -1,62 +1,32 @@
 ---
 import Browser1 from "../../components/Browser1.astro";
 import Browser2 from "../../components/Browser2.astro";
+import Navigation from "../../components/Navigation";
 import Layout from "../../layouts/Layout.astro";
 
 const currentPath = Astro.url.pathname;
 ---
 
 <Layout title="Htet Lin Maung">
-  <div class="flex flex-wrap flex-col md:items-center">
-    <div class="mb-20">
-      <div
-        class="flex items-center"
-        style="margin-bottom: 0.4rem; padding: 0.5rem"
-      >
-        <img
-          class="rounded-full"
-          width="32"
-          height="32"
-          src="profile.jpeg"
-          alt="Profile"
-        />
-        <div
-          style="font-size: 12px; padding-left: 0.6875rem; font-weight: 500;"
-        >
-          Htet Lin Maung
-        </div>
-        <div class="flex-grow"></div>
-        <div
-          class="flex justify-between w-1/3 navigation"
-          style="font-size: 12px"
-        >
-          <a
-            href="/htetlinmaung"
-            style={currentPath == "/htetlinmaung"
-              ? "color: black; font-weight: 500;"
-              : ""}>Home</a
-          >
-          <a href="/htetlinmaung/about">About</a>
-          <a href="/htetlinmaung/works">Works</a>
-          <a href="/htetlinmaung/contact">Contact</a>
-        </div>
-      </div>
+  <div class="flex flex-wrap flex-col">
+    <div class="mb-20 mx-0 sm:mx-3">
+      <Navigation currentPath={currentPath} client:visible />
 
-      <div class="flex flex-wrap row1">
-        <div style="padding: 7.699999999999999px;">
+      <div class="flex flex-wrap row1 mt-16">
+        <div class="w-full md:w-auto main-info-wrapper">
           <div class="flex flex-col main-info">
-            <div style="font-size: 36.4px; margin-bottom: 15.399999999999999px">
+            <div class="hiiamhlm">
               <div id="hiiam"></div>
               <div id="hlm" style="line-height: 3rem;"></div>
             </div>
-            <div style="margin-bottom: 15.399999999999999px; font-size: 14px">
-              <div id="intro-desc" style="max-width: 21rem;"></div>
+            <div style="margin-bottom: 1.375rem; font-size: 1.25rem">
+              <div id="intro-desc" style="max-width: 31rem;"></div>
             </div>
 
             <div
               id="skill-tags"
               class="flex flex-wrap"
-              style="font-size: 11.2px; width: 18rem; opacity: 0; transition: all 1s"
+              style="width: 22rem; opacity: 0; transition: all 1s"
             >
               <div class="skill" style="background: #e1e1e1">Javascript</div>
               <div class="skill" style="background: #66BB4A; color: #fff;">
@@ -71,20 +41,20 @@ const currentPath = Astro.url.pathname;
             </div>
             <div class="flex-grow"></div>
             <div
-              class="flex flex-wrap"
+              class="flex flex-wrap mt-10"
               id="contact-btns"
               style="opacity: 0; transition: all 1s"
             >
               <button
-                class="bg-black btn flex items-center justify-center text-white rounded-full contact-btn"
+                class="bg-black btn hidden sm:flex items-center justify-center text-white rounded-full contact-btn"
                 >Contact me</button
               >
               <button
                 class="icon-btn rounded-full flex items-center justify-center bg-white"
               >
                 <svg
-                  width="22.4"
-                  height="22.4"
+                  width="38"
+                  height="38"
                   viewBox="0 0 38 38"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -98,8 +68,8 @@ const currentPath = Astro.url.pathname;
                 class="icon-btn rounded-full flex items-center justify-center bg-white"
               >
                 <svg
-                  width="22.4"
-                  height="22.4"
+                  width="32"
+                  height="32"
                   viewBox="0 0 32 32"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -113,8 +83,8 @@ const currentPath = Astro.url.pathname;
                 class="icon-btn rounded-full flex items-center justify-center bg-white"
               >
                 <svg
-                  width="22.4"
-                  height="22.4"
+                  width="34"
+                  height="34"
                   viewBox="0 0 34 34"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -128,8 +98,8 @@ const currentPath = Astro.url.pathname;
                 class="icon-btn rounded-full flex items-center justify-center bg-white"
               >
                 <svg
-                  width="22.4"
-                  height="22.4"
+                  width="28"
+                  height="28"
                   viewBox="0 0 28 28"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -143,8 +113,8 @@ const currentPath = Astro.url.pathname;
                 class="icon-btn rounded-full flex items-center justify-center bg-white"
               >
                 <svg
-                  width="22.4"
-                  height="22.4"
+                  width="36"
+                  height="36"
                   viewBox="0 0 36 36"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -157,13 +127,13 @@ const currentPath = Astro.url.pathname;
             </div>
           </div>
         </div>
-        <div class="flex-grow" style="padding: 7.699999999999999px;">
+        <div style="padding: 0.6875rem; flex: 2">
           <div class="hlm-image"></div>
         </div>
       </div>
 
       <div class="flex flex-wrap">
-        <div class="flex-grow project-card-col">
+        <div class="project-card-col" style="flex: 1; position: relative">
           <div
             class="h-full project-card"
             data-aos="fade-up"
@@ -173,12 +143,12 @@ const currentPath = Astro.url.pathname;
               <div>
                 <div
                   class="text-white"
-                  style="font-size: 16.799999999999997px; margin-bottom: 4.8999999999999995px"
+                  style="font-size: 1.5rem; margin-bottom: 0.4375rem"
                 >
                   Animelux
                 </div>
                 <div
-                  style="color: #D3D3D3; font-size: 14px; margin-bottom: 3rem"
+                  style="color: #D3D3D3; font-size: 1.25rem; margin-bottom: 3rem"
                 >
                   Anime streaming website
                 </div>
@@ -189,8 +159,8 @@ const currentPath = Astro.url.pathname;
                 style="margin-right: 0;"
               >
                 <svg
-                  width="38.5"
-                  height="38.5"
+                  width="36"
+                  height="36"
                   viewBox="0 0 51 51"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -205,21 +175,21 @@ const currentPath = Astro.url.pathname;
               <img
                 class="animelux1"
                 src="animelux1.png"
-                width="160"
-                height="238.52499999999998"
+                width="250"
+                height="340.75"
                 alt=""
               />
               <img
                 class="animelux2"
                 src="animelux2.png"
-                width="160"
-                height="238.52499999999998"
+                width="250"
+                height="340.75"
                 alt=""
               />
             </div>
           </div>
         </div>
-        <div class="flex-grow project-card-col">
+        <div class="project-card-col" style="flex: 1">
           <div
             data-aos="fade-up"
             class="h-full flex flex-col project-card"
@@ -229,12 +199,12 @@ const currentPath = Astro.url.pathname;
               <div>
                 <div
                   class="text-white"
-                  style="font-size: 16.799999999999997px; margin-bottom: 4.8999999999999995px"
+                  style="font-size: 1.5rem; margin-bottom: 0.4375rem"
                 >
                   Starless Server
                 </div>
                 <div
-                  style="color: #D3D3D3; font-size: 14px; margin-bottom: 3rem"
+                  style="color: #D3D3D3; font-size: 1.25rem; margin-bottom: 3rem"
                 >
                   Minimalist web server
                 </div>
@@ -245,8 +215,8 @@ const currentPath = Astro.url.pathname;
                 style="margin-right: 0;"
               >
                 <svg
-                  width="38.5"
-                  height="38.5"
+                  width="36"
+                  height="36"
                   viewBox="0 0 51 51"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -258,15 +228,18 @@ const currentPath = Astro.url.pathname;
               </button>
             </div>
             <div
-              style="font-size: 21px; padding-top: 29.69999999999999px;"
+              style="font-size: 1.875rem; padding-top: 5.0625rem;"
               class="text-white flex-grow"
             >
               Single Codebase For Famous Technology
             </div>
-            <div class="flex justify-between" style="margin-bottom: 45.5px;">
+            <div
+              class="flex justify-between technologies"
+              style="margin-bottom: 4.0625rem;"
+            >
               <svg
-                width="52.5"
-                height="52.5"
+                width="75"
+                height="75"
                 viewBox="0 0 75 75"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -282,8 +255,8 @@ const currentPath = Astro.url.pathname;
                   fill="#010101"></path>
               </svg>
               <svg
-                width="51.8"
-                height="51.8"
+                width="74"
+                height="74"
                 viewBox="0 0 74 74"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -313,8 +286,8 @@ const currentPath = Astro.url.pathname;
                 </defs>
               </svg>
               <svg
-                width="45.5"
-                height="52.5"
+                width="67"
+                height="75"
                 viewBox="0 0 67 75"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -331,8 +304,8 @@ const currentPath = Astro.url.pathname;
                 </defs>
               </svg>
               <svg
-                width="52.5"
-                height="52.5"
+                width="75"
+                height="75"
                 viewBox="0 0 75 75"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -349,8 +322,8 @@ const currentPath = Astro.url.pathname;
                 </defs>
               </svg>
               <svg
-                width="52.5"
-                height="52.5"
+                width="75"
+                height="75"
                 viewBox="0 0 75 75"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -386,7 +359,7 @@ const currentPath = Astro.url.pathname;
       </div>
 
       <div class="flex flex-wrap">
-        <div class="flex-grow project-card-col">
+        <div class="project-card-col" style="flex: 1">
           <div
             data-aos="fade-up"
             class="h-full project-card"
@@ -396,12 +369,12 @@ const currentPath = Astro.url.pathname;
               <div>
                 <div
                   class="text-white"
-                  style="font-size: 16.799999999999997px; margin-bottom: 4.8999999999999995px"
+                  style="font-size: 1.5rem; margin-bottom: 0.4375rem"
                 >
                   Scrapper
                 </div>
                 <div
-                  style="color: #D3D3D3; font-size: 14px; margin-bottom: 49.699999999999996px;"
+                  style="color: #D3D3D3; font-size: 1.25rem; margin-bottom: 3rem"
                 >
                   Web scrapping website
                 </div>
@@ -412,8 +385,8 @@ const currentPath = Astro.url.pathname;
                 style="margin-right: 0;"
               >
                 <svg
-                  width="38.5"
-                  height="38.5"
+                  width="36"
+                  height="36"
                   viewBox="0 0 51 51"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -429,7 +402,7 @@ const currentPath = Astro.url.pathname;
             <Browser2 />
           </div>
         </div>
-        <div class="flex-grow project-card-col">
+        <div class="project-card-col" style="flex: 1">
           <div
             data-aos="fade-up"
             class="h-full flex flex-col project-card"
@@ -439,12 +412,12 @@ const currentPath = Astro.url.pathname;
               <div>
                 <div
                   class="text-white"
-                  style="font-size: 16.799999999999997px; margin-bottom: 4.8999999999999995px"
+                  style="font-size: 1.5rem; margin-bottom: 0.4375rem"
                 >
                   Starless Load Tester
                 </div>
                 <div
-                  style="color: #D3D3D3; font-size: 14px; margin-bottom: 3rem"
+                  style="color: #D3D3D3; font-size: 1.25rem; margin-bottom: 3rem"
                 >
                   API load-testing CLI
                 </div>
@@ -455,8 +428,8 @@ const currentPath = Astro.url.pathname;
                 style="margin-right: 0;"
               >
                 <svg
-                  width="38.5"
-                  height="38.5"
+                  width="36"
+                  height="36"
                   viewBox="0 0 51 51"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -467,19 +440,15 @@ const currentPath = Astro.url.pathname;
                 </svg>
               </button>
             </div>
-            <img
-              class="terminal"
-              src="terminal1.png"
-              width="408.45"
-              height="241.85"
-              alt=""
-            />
+            <div class="flex justify-center items-center">
+              <img class="terminal" src="terminal1.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
 
       <div class="flex flex-wrap">
-        <div class="flex-grow project-card-col">
+        <div class="project-card-col" style="flex: 1">
           <div
             data-aos="fade-up"
             class="h-full project-card"
@@ -487,13 +456,11 @@ const currentPath = Astro.url.pathname;
           >
             <div class="flex justify-between">
               <div>
-                <div
-                  style="font-size: 16.799999999999997px; margin-bottom: 4.8999999999999995px"
-                >
+                <div style="font-size: 1.5rem; margin-bottom: 0.4375rem">
                   Application Manager
                 </div>
                 <div
-                  style="color: #333333; font-size: 14px; margin-bottom: 21px"
+                  style="color: #333333; font-size: 1.25rem; margin-bottom: 3rem"
                 >
                   Easy containerized applications manager
                 </div>
@@ -503,8 +470,8 @@ const currentPath = Astro.url.pathname;
                 style="margin-right: 0;"
               >
                 <svg
-                  width="38.5"
-                  height="38.5"
+                  width="36"
+                  height="36"
                   viewBox="0 0 51 51"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -515,16 +482,10 @@ const currentPath = Astro.url.pathname;
                 </svg>
               </button>
             </div>
-            <img
-              src="table.png"
-              style="position: absolute; right: 0; top: 98px;"
-              width="394.79999999999995"
-              height="251.29999999999998"
-              alt=""
-            />
+            <img src="table.png" class="table-image" alt="" />
           </div>
         </div>
-        <div class="flex-grow project-card-col">
+        <div class="project-card-col" style="flex: 1">
           <div
             data-aos="fade-up"
             class="h-full flex flex-col project-card"
@@ -534,12 +495,12 @@ const currentPath = Astro.url.pathname;
               <div>
                 <div
                   class="text-white"
-                  style="font-size: 16.799999999999997px; margin-bottom: 4.8999999999999995px"
+                  style="font-size: 1.5rem; margin-bottom: 0.4375rem"
                 >
                   Slsql
                 </div>
                 <div
-                  style="color: #D3D3D3; font-size: 14px; margin-bottom: 3rem"
+                  style="color: #D3D3D3; font-size: 1.25rem; margin-bottom: 3rem"
                 >
                   Command line program for databases
                 </div>
@@ -550,8 +511,8 @@ const currentPath = Astro.url.pathname;
                 style="margin-right: 0;"
               >
                 <svg
-                  width="38.5"
-                  height="38.5"
+                  width="36"
+                  height="36"
                   viewBox="0 0 51 51"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -562,13 +523,9 @@ const currentPath = Astro.url.pathname;
                 </svg>
               </button>
             </div>
-            <img
-              class="terminal"
-              src="terminal2.png"
-              width="408.45"
-              height="241.85"
-              alt=""
-            />
+            <div class="flex justify-center items-center">
+              <img class="terminal" src="terminal2.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -577,22 +534,27 @@ const currentPath = Astro.url.pathname;
 </Layout>
 
 <style>
+  .hiiamhlm {
+    font-size: 3.25rem;
+    margin-bottom: 1.375rem;
+  }
   .skill {
-    padding: 7px 14px;
-    border-radius: 15px;
-    margin-right: 7px;
-    margin-bottom: 5.6px;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.9375rem;
+    margin-right: 0.625rem;
+    margin-bottom: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .icon-btn {
-    width: 38.5px;
-    height: 38.5px;
-    margin-right: 10.5px;
+    width: 3.4375rem;
+    height: 3.4375rem;
+    margin-right: 0.9375rem;
   }
   .main-info {
-    height: 405.29999999999995px;
+    /* height: 405.29999999999995px; */
+    height: 100%;
     border-radius: 15px;
     background: linear-gradient(
       233.33deg,
@@ -601,25 +563,26 @@ const currentPath = Astro.url.pathname;
       #efebe5 57.81%
     );
     padding: 20.299999999999997px 28px 30.099999999999998px 28px;
-    width: 486.49999999999994px;
+    /* width: 486.49999999999994px; */
   }
   .contact-btn {
     padding: 9.799999999999999px 27.299999999999997px;
-    font-size: 12.6px;
-    margin-right: 10.5px;
+    font-size: 1.125rem;
+    margin-right: 0.9375rem;
   }
   .hlm-image {
     border-radius: 15px;
     overflow: hidden;
     background: url(hlm.jpg);
     background-size: cover;
-    width: 362.59999999999997px;
-    height: 405.29999999999995px;
+    /* width: 362.59999999999997px; */
+    width: 100%;
+    height: 38rem;
     background-position: 50% 50%;
   }
   .project-card {
     /* transition: all 0.2s; */
-    width: 424.9px;
+    /* width: 424.9px; */
     border-radius: 15px;
     padding: 19.599999999999998px 30.099999999999998px;
   }
@@ -630,45 +593,96 @@ const currentPath = Astro.url.pathname;
   }
 
   .project-card-col {
-    padding: 7.699999999999999px;
+    padding: 0.6875rem;
     padding-top: 5.6px;
-    height: 405.29999999999995px;
+    height: 36.1875rem;
   }
   .terminal {
-    position: absolute;
-    left: 8.399999999999999px;
-    top: 98px;
+    width: 100%;
+    height: 100%;
+    max-width: 583.5px;
+    max-height: 345.5px;
+    /* position: absolute;
+    left: 12px;
+    top: 140px; */
   }
   .animelux1 {
     border-radius: 15px;
     transform: rotate(-19deg);
     position: absolute;
-    left: 1.9rem;
+    left: 6rem;
   }
 
   .animelux2 {
     border-radius: 15px;
     transform: rotate(19deg);
     position: absolute;
-    right: 1.9rem;
+    right: 6rem;
   }
 
   button:active {
     transform: scale(80%);
   }
-  .navigation a {
-    color: #757575;
+
+  .table-image {
+    position: absolute;
+    right: 0;
+    top: 131px;
+    width: 100%;
+    height: 100%;
+    max-width: 564px;
+    max-height: 359px;
+  }
+  .main-info-wrapper {
+    padding: 0.6875rem;
+    flex: 3;
   }
 
-  .navigation a:hover {
-    color: black;
-    /* font-weight: 500; */
-  }
-
-  @media only screen and (max-width: 517px) {
-    body {
-      zoom: 100%;
+  @media only screen and (max-width: 896px) {
+    /* .project-card-col {
+      flex: auto !important;
+      width: 100%;
+    } */
+    /* .animelux1 {
+      left: 12rem;
     }
+    .animelux2 {
+      right: 12rem;
+    } */
+  }
+  @media only screen and (max-width: 767px) {
+    .main-info-wrapper {
+      flex: auto;
+    }
+    .project-card-col {
+      flex: auto !important;
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+    .hiiamhlm {
+      font-size: 2.5rem;
+      margin-bottom: 1.375rem;
+    }
+    .animelux1 {
+      border-radius: 15px;
+      transform: rotate(-19deg) scale(0.75);
+      position: absolute;
+      left: 0.1rem;
+    }
+    .animelux2 {
+      border-radius: 15px;
+      transform: rotate(19deg) scale(0.75);
+      position: absolute;
+      right: 0.1rem;
+    }
+    .technologies svg {
+      transform: scale(0.75);
+    }
+  }
+
+  /* @media only screen and (max-width: 517px) {
     .hlm-image {
       width: auto;
       height: 540px;
@@ -688,7 +702,7 @@ const currentPath = Astro.url.pathname;
     .animelux2 {
       right: 4rem;
     }
-  }
+  } */
 
   /* @media only screen and (max-width: 540px) {
     .hlm-image {
@@ -711,7 +725,7 @@ const currentPath = Astro.url.pathname;
       right: 4rem;
     }
   } */
-  @media only screen and (max-width: 280px) {
+  /* @media only screen and (max-width: 280px) {
     .main-info {
       width: 100%;
     }
@@ -720,7 +734,6 @@ const currentPath = Astro.url.pathname;
     }
     .row1 > div {
       flex: 1;
-      /* width: 100%; */
     }
     .hlm-image {
       width: 423px;
@@ -729,7 +742,7 @@ const currentPath = Astro.url.pathname;
     .terminal {
       left: 8.399999999999999px;
     }
-  }
+  } */
 </style>
 <!-- 405.29999999999995px; -->
 <!-- 424.9 w -->
