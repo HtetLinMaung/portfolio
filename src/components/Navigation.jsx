@@ -6,7 +6,7 @@ export default function Navigation({ currentPath }) {
 
   return (
     <div className="fixed top-0 right-0 w-full bg-white z-50 overflow-hidden">
-      <div className="flex items-center nav-container">
+      <div className="flex items-center nav-container mx-0 sm:mx-3">
         <img
           className="rounded-full"
           width="40"
